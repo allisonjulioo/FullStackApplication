@@ -1,0 +1,34 @@
+import { http, HttpResponse } from 'msw';
+import { Product } from '../modules/Product/types';
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4040';
+
+let nextId = 14;
+
+const products: Product[] = [
+  { id: 1, name: 'Notebook Gamer', category: 'Eletrônicos', price: 5499.9, description: 'Notebook gamer com processador i7, 16GB RAM e placa de vídeo dedicada.', image: 'https://picsum.photos/seed/notebook/400/300' },
+  { id: 2, name: 'Cadeira Ergonômica', category: 'Móveis', price: 1299, description: 'Cadeira ergonômica com apoio lombar ajustável e braços reguláveis.', image: 'https://picsum.photos/seed/chair/400/300' },
+  { id: 3, name: 'Fone Bluetooth', category: 'Eletrônicos', price: 349.9, description: 'Fone de ouvido bluetooth com cancelamento de ruído ativo.', image: 'https://picsum.photos/seed/headphone/400/300' },
+  { id: 4, name: 'Mesa de Escritório', category: 'Móveis', price: 899, description: 'Mesa de escritório com regulagem de altura e espaço para cabos.', image: 'https://picsum.photos/seed/desk/400/300' },
+  { id: 5, name: 'Teclado Mecânico', category: 'Periféricos', price: 459.9, description: 'Teclado mecânico RGB com switches blue e anti-ghosting.', image: 'https://picsum.photos/seed/keyboard/400/300' },
+  { id: 6, name: 'Monitor 27 4K', category: 'Eletrônicos', price: 2799, description: 'Monitor 27 polegadas com resolução 4K UHD e painel IPS.', image: 'https://picsum.photos/seed/monitor/400/300' },
+  { id: 7, name: 'Mouse Sem Fio', category: 'Periféricos', price: 199.9, description: 'Mouse sem fio ergonômico com sensor óptico de alta precisão.', image: 'https://picsum.photos/seed/mouse/400/300' },
+  { id: 8, name: 'Webcam Full HD', category: 'Periféricos', price: 279, description: 'Webcam Full HD 1080p com microfone embutido e correção de luz.', image: 'https://picsum.photos/seed/webcam/400/300' },
+  { id: 9, name: 'Caixa de Som Portátil', category: 'Eletrônicos', price: 399.9, description: "Caixa de som portátil à prova d'água com 20h de bateria.", image: 'https://picsum.photos/seed/speaker/400/300' },
+  { id: 10, name: 'Luminária LED', category: 'Decoração', price: 149.9, description: 'Luminária LED de mesa com ajuste de intensidade e temperatura de cor.', image: 'https://picsum.photos/seed/lamp/400/300' },
+  { id: 11, name: 'Mochila para Notebook', category: 'Acessórios', price: 189.9, description: 'Mochila resistente à água com compartimento acolchoado para notebook.', image: 'https://picsum.photos/seed/backpack/400/300' },
+  { id: 12, name: 'Hub USB-C', category: 'Periféricos', price: 229, description: 'Hub USB-C 7 em 1 com HDMI, USB 3.0 e leitor de cartão.', image: 'https://picsum.photos/seed/usbhub/400/300' },
+];
+
+export const handlers = [
+  http.get(`${API_URL}/products`, () => {
+    return HttpResponse.json(products);
+  }),
+
+  http.post(`${API_URL}/products`, async ({ request }) => {
+    const body = (await request.json()) as Omit<Product, 'id'>;
+    const newProduct: Product = { ...body, id: nextId++ };
+    products.push(newProduct);
+    return HttpResponse.json(newProduct, { status: 201 });
+  }),
+];

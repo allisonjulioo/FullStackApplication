@@ -1,0 +1,205 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Page Snapshot should match snapshot 1`] = `
+<div>
+  <title>
+    Product Manager
+  </title>
+  <div
+    class="sc-hzhJZQ hERMhC"
+  >
+    <div>
+      <h2>
+        Produtos
+      </h2>
+      <span
+        class="sc-fHjqPf gXMEzl"
+      >
+        1
+         produto(s) encontrado(s)
+      </span>
+    </div>
+    <button
+      class="sc-aXZVg sc-hmdomO kqNVzW bCvQyU"
+    >
+      Novo Produto
+    </button>
+  </div>
+  <div
+    class="sc-bXCLTC fwFQtF"
+  >
+    <div
+      class="sc-jEACwC dLKoKy"
+    >
+      <input
+        class="sc-cwHptR sc-cPiKLX qHKlH cessQD"
+        placeholder="Buscar por nome..."
+        value=""
+      />
+      <div
+        class="sc-eDPEul kOBiG"
+      >
+        <input
+          class="sc-cwHptR sc-cPiKLX qHKlH cessQD"
+          placeholder="Preço mín"
+          type="number"
+          value=""
+        />
+        <span>
+          -
+        </span>
+        <input
+          class="sc-cwHptR sc-cPiKLX qHKlH cessQD"
+          placeholder="Preço máx"
+          type="number"
+          value=""
+        />
+      </div>
+      <select
+        class="sc-dLMFU jFSYDM"
+      >
+        <option
+          value="name"
+        >
+          Nome
+        </option>
+        <option
+          value="price"
+        >
+          Preço
+        </option>
+        <option
+          value="category"
+        >
+          Categoria
+        </option>
+      </select>
+      <select
+        class="sc-dLMFU jFSYDM"
+      >
+        <option
+          value="asc"
+        >
+          Crescente
+        </option>
+        <option
+          value="desc"
+        >
+          Decrescente
+        </option>
+      </select>
+      <button
+        class="sc-eldPxv cwLZWL"
+      >
+        Limpar filtros
+      </button>
+    </div>
+  </div>
+  <div
+    class="sc-jlZhew iTkYAA"
+  >
+    <div
+      class="sc-kAyceB daziPk"
+      style="opacity: 0; transform: translateY(10px) translateZ(0);"
+    >
+      <div
+        class="sc-imWYAI dnRoGL"
+      >
+        <img
+          alt="Produto Teste"
+          loading="lazy"
+          src="https://example.com/img.jpg"
+        />
+      </div>
+      <div
+        class="sc-jXbUNg cKZGmx"
+      >
+        <div
+          class="sc-dhKdcB cjywaT"
+        >
+          <h3>
+            Produto Teste
+          </h3>
+          <span
+            class="sc-kpDqfm jhZgnH"
+          >
+            Teste
+          </span>
+        </div>
+        <span
+          class="sc-dAlyuH jKCRYW"
+        >
+          <svg
+            fill="none"
+            height="14"
+            stroke="white"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            width="14"
+          >
+            <path
+              d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"
+            />
+            <line
+              x1="3"
+              x2="21"
+              y1="6"
+              y2="6"
+            />
+            <path
+              d="M16 10a4 4 0 01-8 0"
+            />
+          </svg>
+          R$ 99,90
+        </span>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-eeDRCY jCKLri"
+  >
+    <button
+      aria-label="Filtros"
+      class="sc-koXPp sc-bmzYkS bowxSG bhooCB"
+    >
+      <svg
+        fill="none"
+        height="22"
+        stroke="white"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="22"
+      >
+        <line
+          x1="4"
+          x2="20"
+          y1="6"
+          y2="6"
+        />
+        <line
+          x1="8"
+          x2="16"
+          y1="12"
+          y2="12"
+        />
+        <line
+          x1="11"
+          x2="13"
+          y1="18"
+          y2="18"
+        />
+      </svg>
+    </button>
+    <button
+      aria-label="Novo produto"
+      class="sc-koXPp sc-iHGNWf gmOfiq btRLyf"
+    >
+      +
+    </button>
+  </div>
+</div>
+`;

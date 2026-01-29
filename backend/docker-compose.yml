@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    ports:
+      - '4040:4040'
+    environment:
+      - PORT=4040
+      - JWT_SECRET=super-secret-key-change-in-production
+    volumes:
+      - sqlite-data:/app/database.sqlite
+
+volumes:
+  sqlite-data:
